@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap");
+
+$CountriesFont: "Kumbh Sans", Arial, Verdana, Tahoma, Georgia, sans-serif;
+
+@mixin CountriesFontBoldBold() {
+  font-family: $CountriesFont;
+  font-weight: 700;
+}
+
+@mixin CountriesFontSemiBold() {
+  font-family: $CountriesFont;
+  font-weight: 600;
+}
+
+@mixin CountriesFontMediumBold() {
+  font-family: $CountriesFont;
+  font-weight: 500;
+}
+
+@mixin CountriesFontRegularBold() {
+  font-family: $CountriesFont;
+  font-weight: 400;
+}
