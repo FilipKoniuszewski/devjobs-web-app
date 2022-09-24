@@ -8,7 +8,7 @@ export const Searchbar: FunctionComponent<SearchBarProps> = ({ onChange }) => {
   return (
     <div className='searchbar'>
       <div className='searchbar__icon'>
-        <img src={loopIcon} alt='loupe' />
+        <img src={loopIcon} alt='loupe-icon' />
       </div>
       <input type='text' onChange={(event) => onChange(event.target.value)} />
     </div>

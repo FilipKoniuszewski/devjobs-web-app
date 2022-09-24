@@ -37,7 +37,7 @@ export const LocationFilter: FunctionComponent<LocationFilterProps> = ({
             className='option'
             onClick={() => onChange(location)}
           >
-            {filter}
+            {location}
           </div>
         ))}
       </div>

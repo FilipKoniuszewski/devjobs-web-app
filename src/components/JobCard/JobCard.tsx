@@ -2,6 +2,8 @@ import { FunctionComponent } from "react";
 import { DevJobsFields } from "../../types/types";
 import { Link } from "react-router-dom";
 
+import { CompanyLogoProvider } from "../../CompanyLogoProvider";
+
 export type JobCardProps = {
   jobData: DevJobsFields;
 };
@@ -22,7 +24,7 @@ export const JobCard: FunctionComponent<JobCardProps> = ({ jobData }) => {
         className='card__logo-wrapper'
         style={{ background: logoBackground }}
       >
-        <img src={logo} alt='logo' />
+        <CompanyLogoProvider logo={logo} />
       </div>
       <div className='card__info'>
         <div className='card__posted-at'>{postedAt}</div>

@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+
+import { CompanyLogoProvider } from "../../../CompanyLogoProvider";
 import { Button } from "../../Button/Button";
 
 import "./HeaderSection.scss";
@@ -25,7 +27,7 @@ export const HeaderSection: FunctionComponent<HeaderSectionProps> = ({
   return (
     <section className='job__header-section'>
       <div className='job__logo-wrapper' style={{ background: logoBackground }}>
-        <img src={logo} alt='company-logo' />
+        <CompanyLogoProvider logo={logo} />
       </div>
       <div className='job__company-name'>
         <h2>{company}</h2>

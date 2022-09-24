@@ -1,3 +1,5 @@
+@import "../../mixings.scss";
+
 button {
   @include CountriesFontBoldBold;
   padding: 1rem 2rem;

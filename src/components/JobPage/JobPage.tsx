@@ -12,6 +12,8 @@ import "./JobPage.scss";
 export const JobPage: FunctionComponent = () => {
   const { offerId } = useParams();
 
+  console.log(offerId);
+
   const offerData = jobs.find((job) => job.id === Number(offerId));
 
   if (!offerData) return null;
