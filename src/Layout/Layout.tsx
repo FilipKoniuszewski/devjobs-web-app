@@ -6,9 +6,8 @@ import { ThemeContext } from "../contexts/ThemeContextProvider";
 
 export const Layout: FunctionComponent = () => {
   const { theme } = useContext(ThemeContext);
-
   return (
-    <div data-theme={theme}>
+    <div className='layout' data-theme={theme}>
       <Header />
       <Outlet />
     </div>

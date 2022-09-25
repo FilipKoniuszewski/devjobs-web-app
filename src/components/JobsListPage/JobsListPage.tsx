@@ -7,9 +7,9 @@ import { Checkbox } from "../Checkbox/Checkbox";
 import { includesText } from "../../utils/utils";
 import jobs from "../../assets/data.json";
 import { JobCard } from "../JobCard/JobCard";
+import { Button } from "../Button/Button";
 
 import "./JobsListPage.scss";
-import { Button } from "../Button/Button";
 
 export const JobsListPage: FunctionComponent = () => {
   const [input, setInput] = useState<string>("");
@@ -18,7 +18,7 @@ export const JobsListPage: FunctionComponent = () => {
 
   const [isFullTime, setIsFullTime] = useState<boolean>(false);
 
-  const [JobsNumberToShow, setJobsNumberToShow] = useState<number>(9);
+  const [JobsNumberToShow, setJobsNumberToShow] = useState<number>(12);
 
   const onChangeInput = (input: string) => {
     setInput(input);
@@ -39,7 +39,9 @@ export const JobsListPage: FunctionComponent = () => {
   if (!jobs) return null;
 
   const filteredJobs = jobs.filter((job) => {
-    const filterPosition = !input ? true : includesText(input, job.position);
+    const filterPosition = !input
+      ? true
+      : includesText(input, job.position) || includesText(input, job.company);
 
     const filterFullTime = !isFullTime
       ? true
@@ -65,12 +67,12 @@ export const JobsListPage: FunctionComponent = () => {
   };
 
   return (
-    <>
+    <div className='home-page'>
       <section className='jobs-list__filter-section'>
         <Searchbar onChange={onChangeInput} />
         <LocationFilter filter={location} onChange={onChangeLocation} />
         <Checkbox
-          label='Full time'
+          label='Full Time Only'
           onChange={onChangeFullTime}
           isChecked={isFullTime}
         />
@@ -81,10 +83,10 @@ export const JobsListPage: FunctionComponent = () => {
           (job, index) =>
             index < JobsNumberToShow && <JobCard key={job.id} jobData={job} />
         )}
-        {JobsNumberToShow < numberOfFilteredFound && (
-          <Button {...buttonLoadMoreProps} />
-        )}
       </section>
-    </>
+      {JobsNumberToShow < numberOfFilteredFound && (
+        <Button {...buttonLoadMoreProps} />
+      )}
+    </div>
   );
 };

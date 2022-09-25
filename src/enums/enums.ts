@@ -4,7 +4,7 @@ export enum Themes {
 }
 
 export enum Locations {
-  All = "Filter by location",
+  All = "Filter by location...",
   Germany = "Germany",
   Japan = "Japan",
   NewZealand = "New Zealand",

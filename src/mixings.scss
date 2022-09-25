@@ -2,7 +2,7 @@
 
 $CountriesFont: "Kumbh Sans", Arial, Verdana, Tahoma, Georgia, sans-serif;
 
-@mixin CountriesFontBoldBold() {
+@mixin CountriesFontBold() {
   font-family: $CountriesFont;
   font-weight: 700;
 }
@@ -17,7 +17,7 @@ $CountriesFont: "Kumbh Sans", Arial, Verdana, Tahoma, Georgia, sans-serif;
   font-weight: 500;
 }
 
-@mixin CountriesFontRegularBold() {
+@mixin CountriesFontRegular() {
   font-family: $CountriesFont;
   font-weight: 400;
 }

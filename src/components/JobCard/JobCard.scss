@@ -1,0 +1,54 @@
+@import "../../mixings.scss";
+
+.card {
+  color: var(--clr-text-secondary);
+  background-color: var(--bg-elements);
+  display: flex;
+  gap: 0.85rem;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  max-height: 30rem;
+  height: 100%;
+
+  &__logo-wrapper {
+    width: 3rem;
+    height: 3rem;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: -25px;
+  }
+
+  &__company-name,
+  &__info {
+    @include CountriesFontRegular;
+  }
+
+  &__job-name,
+  &__location {
+    @include CountriesFontBold;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__job-name {
+    color: var(--clr-text);
+    font-size: 1.3rem;
+  }
+
+  &__location {
+    color: var(--clr-violet);
+    margin-top: auto;
+    padding-top: 1.5rem;
+  }
+}

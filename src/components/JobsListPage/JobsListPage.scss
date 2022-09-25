@@ -1,0 +1,40 @@
+.home-page {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+
+  .jobs-list__job-section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1152px;
+    gap: 3rem;
+    // margin-bottom: 3rem;
+  }
+
+  .jobs-list__filter-section {
+    background-color: var(--bg-elements);
+    border-radius: 0.5rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1152px;
+    user-select: none;
+
+    > div {
+      cursor: pointer;
+    }
+
+    img {
+      //   width: 1rem;
+      //   height: 1rem;
+    }
+  }
+}

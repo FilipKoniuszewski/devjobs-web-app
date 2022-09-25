@@ -1,0 +1,28 @@
+@import "../../mixings.scss";
+
+.searchbar {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-right: 1px solid var(--clr-border-secondary);
+
+  input {
+    border: 0;
+    background: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    @include CountriesFontMediumBold;
+    font-size: 1rem;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--clr-text-secondary);
+    }
+  }
+}

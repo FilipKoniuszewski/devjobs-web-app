@@ -1,6 +1,10 @@
 import { FunctionComponent } from "react";
+import { BsCircleFill } from "react-icons/bs";
+
 import { DevJobsFields } from "../../types/types";
 import { Link } from "react-router-dom";
+
+import "./JobCard.scss";
 
 export type JobCardProps = {
   jobData: DevJobsFields;
@@ -26,6 +30,7 @@ export const JobCard: FunctionComponent<JobCardProps> = ({ jobData }) => {
       </div>
       <div className='card__info'>
         <div className='card__posted-at'>{postedAt}</div>
+        <BsCircleFill size={5} />
         <div className='card__contract'>{contract}</div>
       </div>
       <div className='card__job-name'>{position}</div>

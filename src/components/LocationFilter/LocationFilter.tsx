@@ -23,24 +23,26 @@ export const LocationFilter: FunctionComponent<LocationFilterProps> = ({
     "countries-filter__selected--inactive": !active,
   });
   return (
-    <div className='countries-filter' onClick={() => setActive(!active)}>
-      <div className='countries-filter__container'>
+    <div className='location-filter' onClick={() => setActive(!active)}>
+      <div className='location-filter__container'>
         <div className='location-icon-wrapper'>
           <img src={locationIcon} alt='location-icon' />
         </div>
         <div className={selectClassNames}>{filter}</div>
       </div>
-      <div className='countries-filter__options'>
-        {Object.values(Locations).map((location) => (
-          <div
-            key={location}
-            className='option'
-            onClick={() => onChange(location)}
-          >
-            {location}
-          </div>
-        ))}
-      </div>
+      {active && (
+        <div className='location-filter__options'>
+          {Object.values(Locations).map((location) => (
+            <div
+              key={location}
+              className='option'
+              onClick={() => onChange(location)}
+            >
+              {location}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

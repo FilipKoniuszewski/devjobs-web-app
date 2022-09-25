@@ -14,13 +14,13 @@ export const Checkbox: FunctionComponent<CheckboxProps> = ({
 }) => {
   return (
     <div className='checkbox'>
-      <label htmlFor='full-time'>{label}</label>
       <input
         id='full-time'
         type='checkbox'
         checked={isChecked}
         onChange={() => onChange(!isChecked)}
       />
+      <label htmlFor='full-time'>{label}</label>
     </div>
   );
 };

@@ -8,16 +8,15 @@ import "./Header.scss";
 
 export const Header: FunctionComponent = () => {
   const { switchTheme } = useContext(ThemeContext);
-
   return (
     <header className='header'>
       <img src={title} alt='title-icon' />
       <div className='toggle-theme'>
-        <img src={sunIcon} alt='sun-icon' />
         <label htmlFor='toggle' onClick={() => switchTheme()}>
+          <img src={sunIcon} alt='sun-icon' />
           <input id='toggle' type='checkbox' className='toggle' />
+          <img src={moonIcon} alt='moon-icon' />
         </label>
-        <img src={moonIcon} alt='moon-icon' />
       </div>
     </header>
   );

@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { JobPage } from "./components/JobPage/JobPage";
 import { JobsListPage } from "./components/JobsListPage/JobsListPage";
-import { Layout } from "./Layout/Layout";
+import { Layout } from "./layout/Layout";
 
-const App = () => {
+function App() {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
@@ -12,6 +12,6 @@ const App = () => {
       </Route>
     </Routes>
   );
-};
+}
 
 export default App;

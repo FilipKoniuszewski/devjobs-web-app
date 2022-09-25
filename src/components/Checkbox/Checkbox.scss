@@ -1,0 +1,9 @@
+@import "../../mixings.scss";
+
+.checkbox {
+  @include CountriesFontBold;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 2rem 1rem;
+}

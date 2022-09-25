@@ -22,9 +22,10 @@ export const ThemeContextProvider: FunctionComponent<
   };
 
   const [windowTheme, setWindowTheme] = useState({
-    theme: Themes.Dark,
+    theme: Themes.Light,
     switchTheme,
   });
+
   return (
     <ThemeContext.Provider value={windowTheme}>
       {children}

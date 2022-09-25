@@ -1,0 +1,48 @@
+.location-filter {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  border-right: 1px solid var(--clr-border-secondary);
+  color: var(--clr-text-secondary);
+  width: 100%;
+  max-width: 20rem;
+  //   display: flex;
+  //   flex-direction: column;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__options {
+    position: absolute;
+    background-color: var(--bg-elements);
+    z-index: 1;
+    align-items: end;
+    top: 100px;
+    border-radius: 0.5rem;
+    margin-left: -1rem;
+    min-width: 100%;
+    box-shadow: var(--box-shadow);
+
+    .option {
+      padding: 1rem;
+      transition: 0.1s;
+
+      &:first-child {
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--clr-text);
+        background-color: var(--bg-select-hover);
+      }
+    }
+  }
+}
