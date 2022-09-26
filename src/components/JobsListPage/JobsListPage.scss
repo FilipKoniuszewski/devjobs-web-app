@@ -1,5 +1,4 @@
 .home-page {
-  width: 100%;
   display: flex;
   gap: 5rem;
   flex-direction: column;
@@ -10,12 +9,10 @@
   .jobs-list__job-section {
     display: grid;
     justify-content: center;
-    align-items: center;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     max-width: 1152px;
     gap: 3rem;
-    // margin-bottom: 3rem;
   }
 
   .jobs-list__filter-section {
@@ -27,7 +24,8 @@
     width: 100%;
     max-width: 1152px;
     user-select: none;
-
+    position: relative;
+    top: -2rem;
     > div {
       cursor: pointer;
     }

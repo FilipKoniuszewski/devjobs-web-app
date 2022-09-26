@@ -1,21 +1,16 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState, useContext } from "react";
 import classNames from "classnames";
 
 import { Locations } from "../../enums/enums";
 import locationIcon from "../../assets/desktop/icon-location.svg";
 
 import "./LocationFilter.scss";
+import { JobContext } from "../../contexts/JobContectProvider";
 
-type LocationFilterProps = {
-  filter: Locations;
-  onChange: (location: Locations) => void;
-};
-
-export const LocationFilter: FunctionComponent<LocationFilterProps> = ({
-  filter,
-  onChange,
-}) => {
+export const LocationFilter: FunctionComponent = () => {
   const [active, setActive] = useState<boolean>(false);
+
+  const { location, onChangeLocation } = useContext(JobContext);
 
   const selectClassNames = classNames({
     "countries-filter__selected": true,
@@ -28,7 +23,7 @@ export const LocationFilter: FunctionComponent<LocationFilterProps> = ({
         <div className='location-icon-wrapper'>
           <img src={locationIcon} alt='location-icon' />
         </div>
-        <div className={selectClassNames}>{filter}</div>
+        <div className={selectClassNames}>{location}</div>
       </div>
       {active && (
         <div className='location-filter__options'>
@@ -36,7 +31,7 @@ export const LocationFilter: FunctionComponent<LocationFilterProps> = ({
             <div
               key={location}
               className='option'
-              onClick={() => onChange(location)}
+              onClick={() => onChangeLocation(location)}
             >
               {location}
             </div>

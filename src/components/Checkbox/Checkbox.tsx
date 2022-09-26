@@ -1,26 +1,20 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useContext } from "react";
+import { JobContext } from "../../contexts/JobContectProvider";
 
 import "./Checkbox.scss";
 
-type CheckboxProps = {
-  label: string;
-  isChecked: boolean;
-  onChange: (isFullTime: boolean) => void;
-};
-export const Checkbox: FunctionComponent<CheckboxProps> = ({
-  label,
-  isChecked,
-  onChange,
-}) => {
+export const Checkbox: FunctionComponent = () => {
+  const { isFullTime, onChangeFullTime } = useContext(JobContext);
+
   return (
     <div className='checkbox'>
       <input
         id='full-time'
         type='checkbox'
-        checked={isChecked}
-        onChange={() => onChange(!isChecked)}
+        checked={isFullTime}
+        onChange={() => onChangeFullTime(!isFullTime)}
       />
-      <label htmlFor='full-time'>{label}</label>
+      <label htmlFor='full-time'>Full Time Only</label>
     </div>
   );
 };

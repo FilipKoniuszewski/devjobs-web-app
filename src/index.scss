@@ -19,6 +19,8 @@
   --bg-select-hover: #faf9f6;
 
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+  --transition: 0.3s;
 }
 
 [data-theme="dark"] {
@@ -40,6 +42,8 @@
   --bg-select-hover: #2b364b;
 
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  --transition: color 0.15s linear, background-color 0.15s linear;
 }
 
 *,
@@ -47,9 +51,12 @@
 *::after {
   box-sizing: border-box;
   color: inherit;
-  transition: 0.3s;
   margin: 0;
   padding: 0;
+}
+
+* {
+  transition: var(--transition);
 }
 
 html {
@@ -60,5 +67,4 @@ html {
   @include CountriesFontMediumBold;
   min-height: 100vh;
   background-color: var(--bg-page);
-  color: var(--clr-text);
 }

@@ -1,12 +1,12 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useContext } from "react";
 import loopIcon from "../../assets/desktop/icon-search.svg";
+import { JobContext } from "../../contexts/JobContectProvider";
 
 import "./Searchbar.scss";
 
-export type SearchBarProps = {
-  onChange: (input: string) => void;
-};
-export const Searchbar: FunctionComponent<SearchBarProps> = ({ onChange }) => {
+export const Searchbar: FunctionComponent = () => {
+  const { onChangeInput } = useContext(JobContext);
+
   return (
     <div className='searchbar'>
       <div className='searchbar__icon'>
@@ -15,7 +15,7 @@ export const Searchbar: FunctionComponent<SearchBarProps> = ({ onChange }) => {
       <input
         placeholder='Filter by title, companies...'
         type='text'
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onChangeInput(event.target.value)}
       />
     </div>
   );

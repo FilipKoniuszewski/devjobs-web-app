@@ -2,6 +2,8 @@
 
 .checkbox {
   @include CountriesFontBold;
+  transition-property: none;
+  color: var(--clr-text);
   display: flex;
   gap: 0.5rem;
   align-items: center;
