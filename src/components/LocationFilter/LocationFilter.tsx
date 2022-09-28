@@ -12,18 +12,17 @@ export const LocationFilter: FunctionComponent = () => {
 
   const { location, onChangeLocation } = useContext(JobContext);
 
-  const selectClassNames = classNames({
-    "countries-filter__selected": true,
-    "countries-filter__selected--active": active,
-    "countries-filter__selected--inactive": !active,
+  const iconClasses = classNames({
+    "location-icon-wrapper": true,
+    "location-icon-wrapper--active": active,
   });
   return (
     <div className='location-filter' onClick={() => setActive(!active)}>
       <div className='location-filter__container'>
-        <div className='location-icon-wrapper'>
+        <div className={iconClasses}>
           <img src={locationIcon} alt='location-icon' />
         </div>
-        <div className={selectClassNames}>{location}</div>
+        <div className={"countries-filter__selected"}>{location}</div>
       </div>
       {active && (
         <div className='location-filter__options'>

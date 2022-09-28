@@ -23,7 +23,7 @@ export const JobPage: FunctionComponent = () => {
   const roleTitle = "What You Will Do";
 
   return (
-    <div className='job-page'>
+    <div className='job'>
       <HeaderSection {...offerData} />
       <div>
         <MainSection {...offerData} />

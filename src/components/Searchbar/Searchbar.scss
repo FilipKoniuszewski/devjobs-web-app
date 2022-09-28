@@ -23,4 +23,10 @@
       outline: none;
     }
   }
+
+  &:focus-within {
+    .searchbar__icon {
+      filter: var(--fitler);
+    }
+  }
 }

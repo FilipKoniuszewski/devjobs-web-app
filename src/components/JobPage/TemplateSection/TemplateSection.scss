@@ -1,0 +1,26 @@
+@import "../../../mixings.scss";
+
+.template-section {
+  background-color: var(--bg-elements);
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  ul,
+  li,
+  p {
+    color: var(--clr-text-secondary);
+  }
+
+  li {
+    margin: 10px 0 10px 1rem;
+  }
+}
+
+.job > div > .template-section:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}

@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+import { BsCircleFill } from "react-icons/bs";
+
 import { Button } from "../../Button/Button";
 
 import "./MainSection.scss";
@@ -32,11 +34,12 @@ export const MainSection: FunctionComponent<MainSectionProps> = ({
     <section className='job__main-section'>
       <div>
         <div className='job__details'>
-          <div className='job__details-info'>
+          <div className='job-secondary-info'>
             <div className='job__details-posted-at'>{postedAt}</div>
+            <BsCircleFill size={5} />
             <div className='job__details-contract'>{contract}</div>
           </div>
-          <h2>{position}</h2>
+          <h1>{position}</h1>
           <div className='job__details-location'>{location}</div>
         </div>
         <Button {...buttonProps} />

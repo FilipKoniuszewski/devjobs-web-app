@@ -15,6 +15,10 @@
     align-items: center;
   }
 
+  .location-icon-wrapper--active {
+    filter: var(--fitler);
+  }
+
   &__options {
     position: absolute;
     background-color: var(--bg-elements);

@@ -8,4 +8,18 @@
   gap: 0.5rem;
   align-items: center;
   padding: 2rem 1rem;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
+
+  input {
+    transform: scale(1.5);
+    accent-color: var(--clr-violet);
+  }
+
+  input:hover {
+    accent-color: var(--clr-violet);
+  }
 }

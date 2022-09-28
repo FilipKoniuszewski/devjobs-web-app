@@ -7,14 +7,15 @@ export const Checkbox: FunctionComponent = () => {
   const { isFullTime, onChangeFullTime } = useContext(JobContext);
 
   return (
-    <div className='checkbox'>
+    <label htmlFor='full-time' className='checkbox'>
       <input
         id='full-time'
         type='checkbox'
         checked={isFullTime}
         onChange={() => onChangeFullTime(!isFullTime)}
       />
-      <label htmlFor='full-time'>Full Time Only</label>
-    </div>
+      <span className='checkbox-input' />
+      Full Time Only
+    </label>
   );
 };

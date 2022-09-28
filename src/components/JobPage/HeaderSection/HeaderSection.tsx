@@ -26,7 +26,7 @@ export const HeaderSection: FunctionComponent<HeaderSectionProps> = ({
   return (
     <section className='job__header-section'>
       <div className='job__logo-wrapper' style={{ background: logoBackground }}>
-        <img src={logo} alt='logo-icon' />
+        <img src={logo} alt={`${company}-logo`} />
       </div>
       <div className='job__company-name'>
         <h2>{company}</h2>

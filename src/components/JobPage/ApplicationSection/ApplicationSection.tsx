@@ -22,11 +22,13 @@ export const ApplicationSection: FunctionComponent<ApplicationSectionProps> = ({
   };
   return (
     <section className='job__application-section'>
-      <div>
-        <div className='position'>{position}</div>
-        <div className='company'>{company}</div>
+      <div className='job__application-section-content'>
+        <div>
+          <h2 className='position'>{position}</h2>
+          <p className='company'>{company}</p>
+        </div>
+        <Button {...buttonProps} />
       </div>
-      <Button {...buttonProps} />
     </section>
   );
 };

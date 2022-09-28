@@ -25,20 +25,13 @@
     top: -25px;
   }
 
-  &__company-name,
-  &__info {
+  &__company-name {
     @include CountriesFontRegular;
   }
 
   &__job-name,
   &__location {
     @include CountriesFontBold;
-  }
-
-  &__info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   &__job-name {

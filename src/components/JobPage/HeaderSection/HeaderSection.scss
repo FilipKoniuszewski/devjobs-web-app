@@ -1,0 +1,46 @@
+@import "../../../mixings.scss";
+
+.job {
+  &__header-section {
+    background-color: var(--bg-elements);
+    max-width: 780px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-right: 3rem;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    position: relative;
+    top: -35px;
+
+    button {
+      @include CountriesFontSemiBold;
+      align-self: center;
+      padding: 1rem 1.2rem;
+    }
+  }
+
+  &__logo-wrapper {
+    border-radius: 0 0 0 0.5rem;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  &__company-name {
+    color: var(--clr-text);
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__company-link {
+    color: var(--clr-text-secondary);
+  }
+}

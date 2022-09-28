@@ -13,8 +13,8 @@ export const TemplateSection: FunctionComponent<TemplateSectionProps> = ({
   items,
 }) => {
   return (
-    <section>
-      <h3>{title}</h3>
+    <section className='template-section'>
+      <h2>{title}</h2>
       <p>{content}</p>
       <ul>
         {items.map((item) => (
