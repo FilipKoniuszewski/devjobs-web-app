@@ -21,7 +21,7 @@ export const JobCard: FunctionComponent<JobCardProps> = ({ jobData }) => {
     location,
   } = jobData;
   return (
-    <Link to={`${id}`} className='card'>
+    <Link to={`${id}`} className='card' role='jobcard'>
       <div
         className='card__logo-wrapper'
         style={{ background: logoBackground }}
