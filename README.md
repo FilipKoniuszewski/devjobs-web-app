@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://github.com/FilipKoniuszewski/devjobs-web-app)
+- [Solution]([https://github.com/FilipKoniuszewski/devjobs-web-app](https://www.frontendmentor.io/solutions/devjobs-web-app-using-react-sass-typescript-ZEmky5RTTc))
 - [Live](https://filipkoniuszewski.github.io/devjobs-web-app/) 
 
 ### Built with
