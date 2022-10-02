@@ -27,7 +27,7 @@
   .switch {
     position: relative;
     display: inline-block;
-    width: 48px;
+    width: 45px;
     height: 23px;
   }
 
@@ -52,10 +52,10 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
+    height: 15px;
+    width: 14px;
     left: 4px;
-    bottom: 3px;
+    bottom: 4px;
     background-color: var(--clr-violet);
     -webkit-transition: 0.4s;
     transition: 0.4s;
