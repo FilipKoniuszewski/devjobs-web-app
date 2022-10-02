@@ -32,6 +32,9 @@
       filter: var(--fitler);
     }
   }
+  &__option:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
 
   &__option {
     cursor: pointer;

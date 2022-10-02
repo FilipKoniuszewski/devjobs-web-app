@@ -30,11 +30,12 @@ export const LocationFilter: FunctionComponent = () => {
   useClickOutside(locationFilterRef, handleFilterClose);
 
   return (
-    <div className='location-filter' onClick={handleFilterClick}>
-      <div
-        className='location-filter__container'
-        ref={active ? locationFilterRef : null}
-      >
+    <div
+      className='location-filter'
+      onClick={handleFilterClick}
+      ref={active ? locationFilterRef : null}
+    >
+      <div className='location-filter__container'>
         <div className={iconClasses}>
           <img src={locationIcon} alt='location-icon' />
         </div>
