@@ -43,8 +43,9 @@ export const JobsListPage: FunctionComponent = () => {
   };
 
   return (
-    <div className='home-page'>
+    <main className='home-page'>
       <section className='jobs-list__filter-section'>
+        <h2 className='hide-for-user'>Filter Section</h2>
         <Searchbar />
         <LocationFilter />
         <Checkbox />
@@ -66,6 +67,7 @@ export const JobsListPage: FunctionComponent = () => {
         </button>
       </section>
       <section className='jobs-list__job-section'>
+        <h2 className='hide-for-user'>Jobs Section</h2>
         {jobs.map(
           (job, index) =>
             index < JobsNumberToShow && <JobCard key={job.id} jobData={job} />
@@ -75,6 +77,6 @@ export const JobsListPage: FunctionComponent = () => {
         <Button {...buttonLoadMoreProps} />
       )}
       <Modal isVisible={isModalOpen} onClose={closeModal} />
-    </div>
+    </main>
   );
 };

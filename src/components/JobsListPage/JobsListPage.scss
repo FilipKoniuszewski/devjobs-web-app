@@ -36,7 +36,12 @@
 .mobile-filter-button {
   display: none;
 }
-
+.hide-for-user {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
 @media (max-width: 1200px) {
   .home-page {
     .jobs-list__job-section {
