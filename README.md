@@ -6,6 +6,7 @@ This is a solution to the [Devjobs web app challenge on Frontend Mentor](https:/
 
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
+- [Links](#links)
 - [Built with](#built-with)
 
 ### The challenge
@@ -21,6 +22,11 @@ Users should be able to:
 ### Screenshot
 
 ![](./public/preview.jpg)
+
+### Links
+
+- [Solution](https://github.com/FilipKoniuszewski/devjobs-web-app)
+- [Live](https://filipkoniuszewski.github.io/devjobs-web-app/) 
 
 ### Built with
 
