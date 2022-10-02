@@ -25,6 +25,6 @@ Users should be able to:
 ### Built with
 
 - React
-- contexts, hooks
+- contexts, hooks, react router dom
 - Typescript
 - Sass
