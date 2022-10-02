@@ -23,14 +23,20 @@ export const JobPage: FunctionComponent = () => {
   const roleTitle = "What You Will Do";
 
   return (
-    <div className='job'>
-      <HeaderSection {...offerData} />
-      <div>
-        <MainSection {...offerData} />
-        <TemplateSection {...requirements} title={requirementsTitle} />
-        <TemplateSection {...role} title={roleTitle} />
+    <>
+      <div className='job'>
+        <HeaderSection {...offerData} />
+        <div>
+          <MainSection {...offerData} />
+          <TemplateSection
+            {...requirements}
+            title={requirementsTitle}
+            ordered={false}
+          />
+          <TemplateSection {...role} title={roleTitle} ordered={true} />
+        </div>
       </div>
       <ApplicationSection {...offerData} />
-    </div>
+    </>
   );
 };

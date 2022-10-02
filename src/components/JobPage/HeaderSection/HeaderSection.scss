@@ -44,3 +44,31 @@
     color: var(--clr-text-secondary);
   }
 }
+
+@media (max-width: 764px) {
+  .job {
+    position: relative;
+
+    &__header-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+      padding-bottom: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    &__company-name {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    &__logo-wrapper {
+      position: absolute;
+      top: -30px;
+      border-radius: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

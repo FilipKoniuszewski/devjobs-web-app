@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 import { createContext } from "react";
+
 import { Themes } from "../enums/enums";
 
 export const ThemeContext = createContext({

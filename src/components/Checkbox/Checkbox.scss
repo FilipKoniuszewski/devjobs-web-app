@@ -23,3 +23,9 @@
     accent-color: var(--clr-violet);
   }
 }
+
+@media (max-width: 785px) {
+  .checkbox {
+    display: none;
+  }
+}

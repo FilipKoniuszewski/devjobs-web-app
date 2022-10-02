@@ -5,17 +5,26 @@ import { ThemeContext } from "../../contexts/ThemeContextProvider";
 import sunIcon from "../../assets/desktop/icon-sun.svg";
 import moonIcon from "../../assets/desktop/icon-moon.svg";
 import title from "../../assets/desktop/logo.svg";
-import { Themes } from "../../enums/enums";
+import { Locations, Themes } from "../../enums/enums";
+import { JobContext } from "../../contexts/JobContectProvider";
 
 import "./Header.scss";
 
 export const Header: FunctionComponent = () => {
   const { theme, switchTheme } = useContext(ThemeContext);
 
+  const { onChangeLocation, onChangeInput, onChangeFullTime } =
+    useContext(JobContext);
+
+  const clearFilters = () => {
+    onChangeLocation(Locations.All);
+    onChangeInput("");
+    onChangeFullTime(false);
+  };
   return (
     <header className='header'>
       <div className='header-wrapper'>
-        <Link to='/'>
+        <Link to='/' onClick={clearFilters}>
           <img src={title} alt='title-icon' />
         </Link>
         <div className='toggle-wrapper' onClick={() => switchTheme()}>

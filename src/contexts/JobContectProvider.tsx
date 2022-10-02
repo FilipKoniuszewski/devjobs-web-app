@@ -6,6 +6,7 @@ import { includesText } from "../utils/utils";
 import jobData from "../assets/data.json";
 
 export const JobContext = createContext({
+  input: "",
   jobs: jobData,
   location: Locations.All,
   isFullTime: false,
@@ -69,6 +70,7 @@ export const JobContextProvider: FunctionComponent<JobContextProviderProps> = ({
     <JobContext.Provider
       value={{
         jobs,
+        input,
         location,
         isFullTime,
         JobsNumberToShow,

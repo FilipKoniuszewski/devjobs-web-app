@@ -1,0 +1,67 @@
+.overlay {
+  inset: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.modal {
+  background-color: var(--bg-elements);
+  border-radius: 0.5rem;
+  max-width: 350px;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 48px);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 3;
+  box-shadow: var(--box-shadow);
+
+  &__filter-location {
+    border-bottom: 1px solid var(--clr-border-secondary);
+    color: var(--clr-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 2rem 2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__filter-location--active {
+    img {
+      filter: var(--fitler);
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+    color: var(--clr-text-secondary);
+    padding: 1rem 2rem;
+  }
+
+  &__option:hover {
+    color: var(--clr-text);
+    background-color: var(--bg-select-hover);
+  }
+
+  &__close {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .checkbox {
+    user-select: none;
+    padding: 2rem 2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 785px) {
+  .modal {
+    .checkbox {
+      display: flex;
+    }
+  }
+}

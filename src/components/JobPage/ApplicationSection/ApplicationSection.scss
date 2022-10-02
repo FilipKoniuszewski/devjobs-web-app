@@ -25,3 +25,23 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .job {
+    &__application-section-content {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .job {
+    &__application-section-content > div {
+      display: none;
+    }
+    &__application-section-content > button {
+      width: 100%;
+    }
+  }
+}

@@ -1,13 +1,17 @@
 @import "../../mixings.scss";
 
 .searchbar {
-  border-right: 1px solid var(--clr-border-secondary);
   display: flex;
   flex: 1;
   gap: 1rem;
   align-items: center;
   padding: 2rem 0;
   transition: 0.3s;
+
+  .searchbar__clear {
+    margin-right: 0.5rem;
+    color: var(--clr-violet);
+  }
 
   input {
     @include CountriesFontMediumBold;
@@ -28,5 +32,11 @@
     .searchbar__icon {
       filter: var(--fitler);
     }
+  }
+}
+
+@media (max-width: 340px) {
+  .searchbar__icon {
+    display: none;
   }
 }

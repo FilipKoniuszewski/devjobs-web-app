@@ -11,13 +11,19 @@
   gap: 1.2rem;
 
   ul,
-  li,
+  li span,
   p {
     color: var(--clr-text-secondary);
   }
 
+  li span {
+    @include CountriesFontRegular;
+  }
+
   li {
     margin: 10px 0 10px 1rem;
+    color: var(--clr-violet);
+    @include CountriesFontBold;
   }
 }
 

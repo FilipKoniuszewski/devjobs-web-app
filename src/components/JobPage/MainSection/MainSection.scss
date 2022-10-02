@@ -45,3 +45,16 @@
     color: var(--clr-text-secondary);
   }
 }
+
+@media (max-width: 764px) {
+  .job {
+    &__main-section > div {
+      flex-direction: column;
+
+      button {
+        margin-top: 4rem;
+        width: 100%;
+      }
+    }
+  }
+}

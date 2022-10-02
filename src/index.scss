@@ -20,7 +20,8 @@
 
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 
-  --transition: 0.3s;
+  --transition: color 0.15s linear, background-color 0.15s linear,
+    opacity 0.15s linear;
 
   --fitler: invert(100%) sepia(0%) saturate(0%) hue-rotate(333deg)
     brightness(101%) contrast(101%);
@@ -46,7 +47,8 @@
 
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
-  --transition: color 0.15s linear, background-color 0.15s linear;
+  --transition: color 0.15s linear, background-color 0.15s linear,
+    opacity 0.15s linear;
 
   --fitler: invert(100%) sepia(0%) saturate(0%) hue-rotate(333deg)
     brightness(101%) contrast(101%);
@@ -80,6 +82,10 @@ h2 {
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
 }
 
 .layout {
