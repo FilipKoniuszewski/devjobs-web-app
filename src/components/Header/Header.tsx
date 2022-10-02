@@ -24,10 +24,8 @@ export const Header: FunctionComponent = () => {
   return (
     <header className='header'>
       <div className='header-wrapper'>
-        <Link to='/devjobs-web-app' onClick={clearFilters}>
-          <h1>
-            <img src={title} alt='title-icon' />
-          </h1>
+        <Link to='/devjobs-web-app/' onClick={clearFilters}>
+          <img src={title} alt='title-icon' />
         </Link>
         <div className='toggle-wrapper' onClick={() => switchTheme()}>
           <img src={sunIcon} alt='sun-icon' />
